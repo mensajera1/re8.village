@@ -1,0 +1,867 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.main {
+
+    
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    
+    
+}
+.main video{
+
+    position: absolute;
+    object-fit: fill;
+    
+    height: 100%;
+    width: 100%;
+    
+    z-index: -1; /* Detrás del contenido */
+
+}
+
+
+
+.title_img {
+    
+    width: 50%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    filter: drop-shadow(0px 10px 10px #454242);
+    
+
+
+}
+
+
+.section_div {
+
+
+    padding: 7em;
+
+    height: 100vh;
+    
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(3,1fr); */
+    gap: 2em;
+    justify-content: center;
+
+    overflow: scroll;
+    
+
+   
+}
+
+.section_div::-webkit-scrollbar {
+    display: none;
+}
+
+
+.heisenberg {
+    position: relative;
+    width: 250px;
+    height: 450px;
+    transition: all .3s ease;
+    filter: drop-shadow(0 5px 5px #e8cd06);
+}
+
+.heisenberg_img {
+
+    
+    border-radius: 4px;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+.heisenberg_png {
+
+
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+    margin-bottom: 2em;
+
+
+}
+
+.heisenberg:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+.heisenberg::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
+    transition: all .3s ease;
+    opacity: 0;
+
+}
+
+.heisenberg:hover::before {
+    opacity: 1;
+
+}
+
+.heisenberg:hover .heisenberg_png {
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+.dimitrescu {
+    position: relative;
+    transition: all .3s ease;
+    width: 250px;
+    height: 450px;
+}
+
+.dimitrescu_img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    
+
+
+
+
+}
+
+.dimitrescu_png {
+
+    position: absolute;
+    width: 200px;
+    height: 350px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+    margin-bottom: 3em;
+
+}
+
+.dimitrescu:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+.dimitrescu::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
+    transition: all .3s ease;
+    opacity: 0;
+}
+
+.dimitrescu:hover::before {
+    opacity: 1;
+}
+
+.dimitrescu:hover .dimitrescu_png {
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+.donna {
+    position: relative;
+    width: 250px;
+    height: 450px;
+    transition: all 0.3s ease;
+
+}
+
+.donna_img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+
+
+}
+
+.donna_png {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+    margin-bottom: 2em;
+}
+
+.donna:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+.donna::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0) 95%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.donna:hover::before {
+    opacity: 1;
+}
+
+.donna:hover .donna_png {
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+.salvatore{
+    position: relative;
+    width: 250px;
+    height: 450px;
+    transition: all .3s ease;
+}
+.salvatore_img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%; 
+    border-radius: 4px;
+
+}
+.salvatore_png{
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+    margin-bottom: 2.5em;
+}
+
+.salvatore:hover{
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+.salvatore::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0,0,0,0.5) 50%, rgba(0,0,0)95%);
+    transition: all .3s ease;
+    opacity: 0;
+}
+.salvatore:hover::before{
+    opacity: 1;
+
+}
+.salvatore:hover .salvatore_png{
+    opacity: 1;
+    transform: translateY(10%);
+}
+.miranda{
+    position: relative;
+    width: 250px;
+    height: 450px;
+    transition: all .3s ease;
+}
+.miranda_img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.miranda_png{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+    margin-bottom: 2em;
+
+}
+.miranda:hover{
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+    
+}
+.miranda::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom,transparent 10%, rgba(0,0,0,0.5) 50%, rgba(0,0,0) 95%);
+    transition: all .3s ease;
+    opacity: 0;
+
+}
+
+.miranda:hover::before{
+    opacity: 1;
+}
+.miranda:hover .miranda_png{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+.ethan{
+    position: relative;
+    width: 250px;
+    height: 450px;
+    transition: all .3s ease;
+}
+
+.ethan_img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.ethan_png{
+    position: absolute;
+    width: 160px;
+    height: 350px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    opacity: 0;
+    margin-bottom: 3em;
+}
+.ethan:hover{
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+.ethan::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0,0,0,0.5) 50%,rgba(0,0,0) 95%);
+    transition: all .3s ease;
+    opacity: 0;
+
+}
+.ethan:hover::before{
+    opacity: 1;
+}
+.ethan:hover .ethan_png{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+.rose{
+    position: relative;
+    width: 250px;
+    height: 450px;
+    transition: all .3s ease;
+
+}
+
+.rose_img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.rose_png{
+    position: absolute;
+    width: 200px;
+    height: 370px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    margin-bottom: 3em;
+    opacity: 0;
+}
+.rose:hover{
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+.rose::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0) 95%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.rose:hover::before{
+    opacity: 1;
+}
+.rose:hover .rose_png{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+
+
+
+
+
+
+.duke{
+    position: relative;
+    width: 250px;
+    height: 450px;
+    transition: all .3s ease;
+
+}
+
+.duke_img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.duke_png{
+    position: absolute;
+    width: 200px;
+    height: 370px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    margin-bottom: 2em;
+    opacity: 0;
+}
+.duke:hover{
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+.duke::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0) 95%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.duke:hover::before{
+    opacity: 1;
+}
+.duke:hover .duke_png{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+
+
+
+
+
+
+
+.electrico{
+    position: relative;
+    width: 250px;
+    height: 450px;
+    transition: all .3s ease;
+
+}
+
+.electrico_img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.electrico_png{
+    position: absolute;
+    width: 200px;
+    height: 370px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    margin-bottom: 3em;
+    opacity: 0;
+}
+.electrico:hover{
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+.electrico::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0) 95%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.electrico:hover::before{
+    opacity: 1;
+}
+.electrico:hover .electrico_png{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+
+
+
+
+
+
+.cris{
+    position: relative;
+    width: 250px;
+    height: 450px;
+    transition: all .3s ease;
+
+}
+
+.cris_img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.cris_png{
+    position: absolute;
+    width: 200px;
+    height: 370px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform:   translateY(25%) ;
+    transition: .3s ease;
+    margin-bottom: 3em;
+    opacity: 0;
+}
+.cris:hover{
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+.cris::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0) 95%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.cris:hover::before{
+    opacity: 1;
+}
+.cris:hover .cris_png{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+
+
+
+
+.lycan{
+    position: relative;
+    width: 250px;
+    height: 450px;
+    transition: all .3s ease;
+
+}
+
+.lycan_img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.lycan_png{
+    position: absolute;
+    width: 200px;
+    height: 370px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    margin-bottom: 3em;
+    opacity: 0;
+}
+.lycan:hover{
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+.lycan::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0) 95%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.lycan:hover::before{
+    opacity: 1;
+}
+.lycan:hover .lycan_png{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+
+
+
+
+.urias{
+    position: relative;
+    width: 250px;
+    height: 450px;
+    transition: all .3s ease;
+
+}
+
+.urias_img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.urias_png{
+    position: absolute;
+    width: 200px;
+    height: 370px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: .3s ease;
+    margin-bottom: 2em;
+    opacity: 0;
+}
+.urias:hover{
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+.urias::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 10%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0) 95%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.urias:hover::before{
+    opacity: 1;
+}
+.urias:hover .urias_png{
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+@media(max-width:600px){
+    .title_img{
+        width: 90%;
+    }
+    .miranda_png{
+        width: 150px;
+    }
+    .heisenberg_png,
+    .dimitrescu_png,
+    .donna_png,
+    .salvatore_png, 
+    .ethan_png, 
+    .rose_png, 
+    .duke_png, 
+    .electrico_png, 
+    .cris_png, 
+    .lycan_png, 
+    .urias_png {
+        width: 150px;
+        height: 300px;
+    }
+}
+
+
+
+.heisenberg,
+.dimitrescu,
+.donna,
+.salvatore,
+.miranda,
+.ethan,
+.rose,
+.duke,
+.electrico,
+.cris,
+.lycan,
+.urias{
+    filter: drop-shadow(0 5px 5px #e8cd06);
+}
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-about h3,
+.footer-links h3,
+.footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-about p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
